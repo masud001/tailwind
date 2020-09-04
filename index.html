@@ -16,8 +16,143 @@
 		<link rel="stylesheet" href="./build/css/tailwind.css" />
 	</head>
 	<body class="bg-gray-100">
+		<!-- RESPONSIVE HEADER FOR MOBILE START -->
+		<div
+			class="sticky top-0 block md:hidden pt-4 pb-0 bg-gray-400 relative"
+		>
+			<!-- mobile menu top -->
+			<div class="flex justify-between items-center px-12">
+				<div class="mobileDropdownMenu">
+					<span
+						><i
+							class="fa fa-bars text-4xl text-gray-800 cursor-pointer"
+							aria-hidden="true"
+						></i
+					></span>
+				</div>
+				<!-- mobile logo  -->
+				<a href="#">
+					<img
+						class="w-30 mb-2"
+						src="https://via.placeholder.com/150x75"
+						alt="mobile logo"
+					/>
+				</a>
+				<!-- right icons  -->
+				<div class="flex space-x-6">
+					<a href="#"
+						><i
+							class="fa fa-user text-4xl text-gray-800"
+							aria-hidden="true"
+						></i
+					></a>
+					<a href="#"
+						><i
+							class="fa fa-shopping-bag text-4xl text-gray-800"
+							aria-hidden="true"
+						></i
+					></a>
+				</div>
+			</div>
+
+			<!-- mobile search bar  -->
+			<div
+				class="transition-all duration-500 ease-in-out bg-gray-200 py-2 px-2 flex justify-center items-center w-full"
+				id="mobileSerachBar"
+			>
+				<input
+					class="bg-white placeholder-gray-900 focus:outline-none border border-gray-300 rounded-lg rounded-r-none py-2 px-4 block w-full appearance-none leading-normal"
+					type="email"
+					placeholder="jane@example.com"
+				/>
+				<span
+					><i
+						class="fa fa-search text-2xl rounded-r-lg py-2 px-4 cursor-pointer bg-white"
+						aria-hidden="true"
+					></i
+				></span>
+			</div>
+
+			<!-- mobile dropdown list  -->
+			<div
+				class="mobileMenuList bg-gray-300 rounded-t-none rounded-md hidden border-t-2 border-gray-100 flex-col shadow-lg absolute w-full bg-gray-400 pb-10"
+			>
+				<ul>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>HOME</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>CATEGORIES</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>DELIVERY</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>ABOUT US</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>CONTACT US</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>MY ACCOUNT</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>gbp</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>DEMO@PUSHCOMMERCE.COM</a
+						>
+					</li>
+					<li class="block hover:bg-gray-500">
+						<a
+							class="block py-2 text-gray-800 uppercase text-xl hover:text-white px-12"
+							href=""
+							>+44(0)02-123-456-789</a
+						>
+					</li>
+				</ul>
+				<!-- <a href="#"
+							> BACK CHAIRS OFFICE STUFF BACK VIEW ALL OFFICE
+							STUFF MISC ITEMS DESKS
+						</a> -->
+			</div>
+		</div>
+		<!-- mobile menu  -->
+
+		<!-- RESPONSIVE HEADER FOR MOBILE END -->
 		<!-- ========= HEADER TOP COMPONENTS START =================== -->
-		<div class="bg-gray-300">
+		<div class="bg-gray-300 hidden md:block">
 			<div class="container mx-auto flex justify-between pt-2 pb-2 px-5">
 				<!-- left container  -->
 				<div class="flex flex-col md:flex-row">
@@ -80,7 +215,9 @@
 		</div>
 		<!-- ========= HEADER TOP COMPONENTS END ===================== -->
 		<!-- ============ MAIN HEADER COMPONENTS START ================-->
-		<div class="sticky top-0 bg-gray-100 border-b-2 border-gray-600">
+		<div
+			class="sticky top-0 bg-gray-100 border-b-2 border-gray-600 hidden md:block"
+		>
 			<div
 				class="container mx-auto flex justify-between items-center px-5 md:py-6 ms:py-3"
 			>
@@ -105,13 +242,59 @@
 								HOME
 							</a>
 						</li>
-						<li class="inline">
+						<li class="inline-block relative menu-dropdown">
 							<a
 								class="inline-block sm:text-xs md:text-sm uppercase text-gray-900 py-2 sm:px-2 px-5 hover:text-white hover:bg-gray-500 rounded-sm"
 								href="#"
 							>
 								CATEGORIES
+								<span
+									><i
+										class="fa fa-angle-down space-x-1"
+										aria-hidden="true"
+									></i
+								></span>
 							</a>
+							<ul
+								id="dropdown-list"
+								class="absolute left-0 w-40 hidden flex-col rounded-r-sm shadow-md bg-gray-400"
+							>
+								<li class="hover:bg-gray-700 px-3">
+									<a
+										class="block py-2 text-gray-800 capitalize hover:text-white"
+										href="#"
+										>dropdown list</a
+									>
+								</li>
+								<li class="hover:bg-gray-700 px-3">
+									<a
+										class="block py-2 text-gray-800 capitalize hover:text-white"
+										href="#"
+										>dropdown list</a
+									>
+								</li>
+								<li class="hover:bg-gray-700 px-3">
+									<a
+										class="block py-2 text-gray-800 capitalize hover:text-white"
+										href="#"
+										>dropdown list</a
+									>
+								</li>
+								<li class="hover:bg-gray-700 px-3">
+									<a
+										class="block py-2 text-gray-800 capitalize hover:text-white"
+										href="#"
+										>dropdown list
+									</a>
+								</li>
+								<li class="hover:bg-gray-700 px-3">
+									<a
+										class="block py-2 text-gray-800 capitalize hover:text-white"
+										href="#"
+										>dropdown list</a
+									>
+								</li>
+							</ul>
 						</li>
 						<li class="inline">
 							<a
@@ -141,13 +324,13 @@
 				</div>
 				<!-- right icons  -->
 				<div class="">
-					<a href="#">
+					<a href="#" id="searchBtn">
 						<i
 							class="fa fa-search text-gray-900 sm:p-1 sm:text-xs md:text-base md:p-3 bg-gray-400 rounded-md"
 							aria-hidden="true"
 						></i>
 					</a>
-					<a href="#">
+					<a href="#" id="addToCardBtn">
 						<i
 							class="fa fa-cart-plus text-gray-900 sm:p-1 sm:text-xs md:text-base md:p-3 bg-gray-400 rounded-md"
 							aria-hidden="true"
@@ -155,168 +338,645 @@
 					</a>
 				</div>
 			</div>
+			<!-- SEARCH CONTAINER START  -->
+			<div
+				class="transition-all duration-500 ease-in-out bg-gray-200 py-5 hidden justify-center items-center absolute w-full"
+				id="serachBar"
+			>
+				<input
+					class="bg-white placeholder-gray-900 focus:outline-none border border-gray-300 rounded-lg rounded-r-none py-2 px-4 block w-1/2 appearance-none leading-normal"
+					type="email"
+					placeholder="jane@example.com"
+				/>
+				<span
+					><i
+						class="fa fa-search text-2xl rounded-r-lg py-2 px-4 cursor-pointer bg-white"
+						aria-hidden="true"
+					></i
+				></span>
+			</div>
+			<!-- SEARCH CONTAINER END  -->
 		</div>
 		<!-- ============ MAIN HEADER COMPONENTS END ===================-->
 
 		<!--=============== NEW ARIVAL CONTAINER START ========================-->
 		<div class="container mx-auto px-5 pb-32">
 			<h1
-				class="text-4xl text-center font-semibold capitalize font-mono mt-5 mb-5"
+				class="text-4xl text-center font-semibold capitalize font-mono text-gray-800 mt-5 mb-5"
 			>
 				New Arrivals
 			</h1>
-			<hr  class="mb-5 border-b-1 border-gray-600"/>
+			<hr class="mb-5 border-b-1 border-gray-600" />
 			<div
 				class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6"
-            >
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-               <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-               <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-           
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-            <!-- single card  -->
-            <div class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5">
-                <!-- card image  -->
-                <a href="#"><img src="https://via.placeholder.com/500x350" class="w-full" alt="card img"></a>
-                <div class="p-3 text-center bg-green-100">
-                    <a href="#" class="mb-3">Snappy Auction Test 1</a>
-                    <p class="font-black my-3">£1.00</p>
-                    <p>1 Bid</p>
-                    
-                    <p class=" my-2"> <i class="fa fa-clock" aria-hidden="true"></i></span>  Ended <span class="font-bold uppercase">sold</span></p>
-                    <p> <span>lot</span> 7O6K0F</p>
-                    <a class="transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                     <a class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white" href="#"><span><i class="fa fa-eye mr-2" aria-hidden="true"></i></span> quick view</a>
-                </div>
-            </div>
-            <!-- single card end  -->
-        </div>
+			>
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i>
+							Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list w</a
+						>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+				<!-- single card  -->
+				<div
+					class="border border-gray-600 rounded-md shadow-md overflow-hidden my-5"
+				>
+					<!-- card image  -->
+					<a href="#"
+						><img
+							src="https://via.placeholder.com/500x350"
+							class="w-full"
+							alt="card img"
+					/></a>
+					<div class="p-3 text-center bg-green-100">
+						<a href="#" class="mb-3">Snappy Auction Test 1</a>
+						<p class="font-black my-3">£1.00</p>
+						<p>1 Bid</p>
+
+						<p class="my-2">
+							<i class="fa fa-clock" aria-hidden="true"></i> Ended
+							<span class="font-bold uppercase">sold</span>
+						</p>
+						<p><span>lot</span> 7O6K0F</p>
+						<a
+							class="quickViewBtn transition duration-500 ease-in-out mt-10 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							quick view</a
+						>
+						<a
+							class="transition duration-500 ease-in-out mt-3 block bg-white text-gray-900 uppercase p-2 rounded-sm shadow-md hover:bg-gray-900 hover:text-white"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							Add to watch list
+						</a>
+					</div>
+				</div>
+				<!-- single card end  -->
+			</div>
 		</div>
 		<!--=============== NEW ARIVAL CONTAINER END  ==========================-->
-		
+
+		<!-- ========POP-UP MODAL FOR ADD-TO-CART BUTTON START======================-->
+
+		<div
+			class="bg-gray-700 bg-opacity-75 fixed inset-0 hidden justify-center items-center"
+			id="addToCartModal"
+		>
+			<div class="bg-white rounded p-3 pb-10 w-1/2 space-y-10">
+				<!-- model header  -->
+				<div
+					class="flex justify-between items-center border-b-2 border-gray-600 pb-2"
+				>
+					<h1
+						class="text-gray-900 text-lg font-mono font-bold uppercase"
+					>
+						Shopping Basket Overview
+					</h1>
+					<svg
+						id="addToCartModelCloseBtn"
+						class="fill-current h-10 w-10 cursor-pointer"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</div>
+				<!-- modal body  -->
+				<div
+					class="flex flex-col justify-center items-center space-y-5"
+				>
+					<svg
+						class="fill-current h-10 w-10"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+						/>
+					</svg>
+					<h1 class="uppercase">no items found</h1>
+				</div>
+			</div>
+		</div>
+		<!-- =======POP-UP MODAL FOR ADD-TO-CART BUTTON END=========================-->
+
+		<!-- QUICK VIEW MODEL START  -->
+		<div
+			class="bg-gray-700 bg-opacity-75 fixed inset-0 hidden justify-center items-center"
+			id="quickViewModal"
+		>
+			<div class="bg-white rounded p-3 pb-10 w-2/3">
+				<div
+					class="flex justify-between items-center border-b-2 border-gray-600 pb-2"
+				>
+					<h1
+						class="text-gray-900 text-lg font-mono font-bold uppercase"
+					>
+						Quick View
+					</h1>
+					<svg
+						id="quickViewModalCloseBtn"
+						class="fill-current h-10 w-10 cursor-pointer"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				</div>
+				<!-- quick view main body -->
+				<div class="grid grid-cols-2 gap-4 my-5">
+					<div class="">
+						<img
+							class="object-cover w-full h-64 min-w-md mx-auto border-gray-500 border m-2 p-2"
+							src="https://via.placeholder.com/450x450"
+							alt=""
+						/>
+						<div class="grid grid-cols-3 gap-2 mt-2">
+							<img
+								class="p-2 border border-gray-500"
+								src="https://via.placeholder.com/200x200"
+								alt=""
+							/>
+							<img
+								class="p-2 border border-gray-500"
+								src="https://via.placeholder.com/200x200"
+								alt=""
+							/>
+							<img
+								class="p-2 border border-gray-500"
+								src="https://via.placeholder.com/200x200"
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="">
+						<h1 class="text-2xl font-bold mb-3 text-gray-800">
+							Imported Red Scarf Floral - Test
+						</h1>
+						<h2
+							class="text-lg font-semibold uppercase text-gray-800 mb-3"
+						>
+							poa
+						</h2>
+						<p class="text-gray-700 text-lg mb-3">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit.
+						</p>
+						<p class="uppercase text-green-700 font-semibold">
+							<span class="capitalize text-gray-800 font-bold"
+								>Availability:</span
+							>
+							IN STOCK
+						</p>
+						<p>
+							<span class="capitalize text-gray-800 font-bold"
+								>SKU: </span
+							>FRS1
+						</p>
+						<p>
+							<span class="capitalize text-gray-800 font-bold"
+								>Weight:
+							</span>
+							0.5 kg
+						</p>
+
+						<a
+							class="transition duration-500 ease-in-out text-center mt-10 block bg-green-700 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900 mb-2"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							request price</a
+						>
+						<a
+							class="transition duration-500 ease-in-out text-center mb-2 block bg-gray-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							view details</a
+						>
+						<a
+							class="transition duration-500 ease-in-out text-center mb-5 block bg-red-900 text-white uppercase p-2 rounded-sm shadow-md hover:bg-white hover:text-red-900"
+							href="#"
+							><span
+								><i
+									class="fa fa-eye mr-2"
+									aria-hidden="true"
+								></i
+							></span>
+							add to watch list</a
+						>
+					</div>
+				</div>
+				<!-- quick view main body end -->
+			</div>
+		</div>
+		<!-- QUICK VIEW MODEL END  -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+			integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+			crossorigin="anonymous"
+		></script>
+		<script src="./build/js/index.js"></script>
 	</body>
 </html>
