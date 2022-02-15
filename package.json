@@ -1,0 +1,35 @@
+{
+  "name": "learning.tailwindcss",
+  "version": "1.0.0",
+  "description": "I started to learning tailwind css from beginning.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/assets/css/tailwind.css -o ./src/assets/output/tailwind.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masud001/tailwind.git"
+  },
+  "keywords": [
+    "tailWIndCSS",
+    "learn",
+    "css",
+    "tailwindCSS-framework",
+    "frontend",
+    "Development",
+    "css-framework",
+    "utility",
+    "first",
+    "css",
+    "framework."
+  ],
+  "author": "Muhammad Masudur Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masud001/tailwind/issues"
+  },
+  "homepage": "https://github.com/masud001/tailwind#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}
